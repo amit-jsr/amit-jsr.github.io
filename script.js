@@ -16,6 +16,12 @@ const formStatus = document.getElementById('formStatus');
 
 // Add entrance animations on page load
 window.addEventListener('load', () => {
+  // Set current year in footer
+  const currentYearElement = document.getElementById('currentYear');
+  if (currentYearElement) {
+    currentYearElement.textContent = new Date().getFullYear();
+  }
+  
   // Animate hero section elements with stagger
   const heroElements = document.querySelectorAll('.hero .reveal');
   heroElements.forEach((el, index) => {
