@@ -114,27 +114,19 @@ projectListItems.forEach(item => {
     projectListItems.forEach(listItem => listItem.classList.remove('active'));
     item.classList.add('active');
     
-    // Fade out current project
-    const currentActive = document.querySelector('.project-detail.active');
-    if (currentActive) {
-      currentActive.classList.remove('active');
-    }
-    
-    // Show new project
-    setTimeout(() => {
-      const newProject = document.getElementById(projectId);
-      if (newProject) {
-        newProject.classList.add('active');
-        
-        // On mobile/tablet, scroll to project details
-        if (window.innerWidth <= 1120) {
-          const container = document.querySelector('.project-details-container');
-          setTimeout(() => {
-            container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }, 100);
-        }
+    // Deterministic switch: remove active from all, then activate selected
+    projectDetails.forEach(detail => detail.classList.remove('active'));
+
+    const newProject = document.getElementById(projectId);
+    if (newProject) {
+      newProject.classList.add('active');
+
+      // On mobile/tablet, scroll to project details
+      if (window.innerWidth <= 1120) {
+        const container = document.querySelector('.project-details-container');
+        container?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
-    }, 150);
+    }
   });
 });
 
