@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amit Jaiswar | Portfolio</title>
+  <meta name="description" content="Portfolio website of Amit Jaiswar, Senior AI Engineer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">AJ.</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+        <a href="assets/amit-jsr.pdf" class="resume-btn" download><i class="fas fa-download"></i> Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Hello! I'm</p>
+          <h1>Amit <span>Jaiswar</span></h1>
+          <h2>Senior AI Engineer | Gen-AI</h2>
+          <p class="hero-text">
+            Building intelligent AI systems and delivering data-driven solutions to complex business challenges with 4.5+ years of experience in GenAI and ML.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
+            <a href="#projects" class="btn btn-secondary">View Projects</a>
+          </div>
+
+          <div class="socials">
+            <a href="https://github.com/amit-jsr" target="_blank" aria-label="GitHub" class="icon-btn"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/amit-jsr/" target="_blank" aria-label="LinkedIn" class="icon-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:jaiswaramit96@gmail.com" aria-label="Email" class="icon-btn"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="code-card-shadow"></div>
+          <div class="code-card">
+            <div class="code-top">
+              <div class="dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+            </div>
+<pre><code>// Senior AI Engineer
+const engineer = {
+  name: 'Amit Jaiswar',
+  skills: ['GenAI', 'NLP', 'ML', 'Python'],
+  focuses: ['Agentic AI', 'RAG', 'LLMs'],
+  experience: '4.5+ years'
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>About Me</h2>
+          <div class="underline"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <div class="about-intro">
+              <div class="bio-head">
+           
+              </div>
+              <p>
+                Senior AI Engineer with over 4.5 years of experience in generative AI, NLP, and machine learning. 
+                Specializing in building agentic AI systems and delivering data-driven solutions to complex business 
+                challenges. Expert in AWS Bedrock, LangChain, and modern ML frameworks.
+              </p>
+            </div>
+
+            <div class="info-grid">
+              <article class="info-card">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <p class="strong">MTech in Computer Science</p>
+                <p>Indian Statistical Institute, Kolkata</p>
+                <p>2019 – 2021</p>
+                <br>
+                <p class="strong">BTech in Computer Science</p>
+                <p>Dr. A.P.J. Abdul Kalam Technical University</p>
+                <p>2014 – 2018</p>
+              </article>
+
+              <article class="info-card">
+                <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                <p class="strong">Senior AI Engineer - GenAI</p>
+                <p>Coforge Ltd.</p>
+                <p>Dec 2024 – Present</p>
+                <br>
+                <p class="strong">Senior Engineer - Data Science</p>
+                <p>BluePi Consulting</p>
+                <p>Jan 2022 – Dec 2024</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="profile-card reveal">
+            <div class="profile-ring">
+              <img src="assets/profile.jpeg" alt="Profile placeholder" />
+            </div>
+            <h3>Amit Jaiswar</h3>
+            <p>Senior AI Engineer</p>
+            <div class="pill-wrap">
+              <span class="pill">GenAI</span>
+              <span class="pill">NLP</span>
+              <span class="pill">ML</span>
+              <span class="pill">AWS</span>
+            </div>
+            <a href="/Users/amit/Desktop/work-dir/Amit_Jaiswar_AI.pdf" class="btn btn-primary full" download><i class="fas fa-download"></i> Download Resume</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Projects</h2>
+          <div class="underline"></div>
+          <p class="section-copy">
+            Enterprise-scale AI and data engineering projects delivering measurable business impact.
+          </p>
+        </div>
+
+        <div class="achievements-top">
+          <p class="drag-text"><i class="fas fa-grip-lines-vertical"></i> Drag to explore</p>
+          <div class="slider-controls">
+            <button id="projectPrevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <button id="projectNextBtn" aria-label="Next" class="active-btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <div class="slider-viewport">
+          <div class="slider-track" id="projectSliderTrack">
+          <article class="project-card reveal">
+            <div class="project-visual"><img src="assets/project1.svg" alt="Project visual 1"></div>
+            <div class="project-content">
+              <h3>Agentic AI</h3>
+              <p>
+                Agentic AI applications using AWS Bedrock and Strands to extract and structure data from unstructured documents, generating end-to-end workflows.
+              </p>
+              <div class="pill-wrap">
+                <span class="pill">AWS Bedrock</span>
+                <span class="pill">Strands</span>
+                <span class="pill">Agentic AI</span>
+                <span class="pill">LLMs</span>
+              </div>
+              <a href="https://github.com/amit-jsr" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual"><img src="assets/project2.svg" alt="Project visual 2"></div>
+            <div class="project-content">
+              <h3>Chatbot / RAG</h3>
+              <p>
+                LLM chatbot converting natural language to SQL, integrated with Snowflake for enterprise data queries. Built custom RAG pipelines for domain-specific Q&A.
+              </p>
+              <div class="pill-wrap">
+                <span class="pill">LLMs</span>
+                <span class="pill">RAG</span>
+                <span class="pill">Snowflake</span>
+                <span class="pill">LangChain</span>
+              </div>
+              <a href="https://github.com/amit-jsr" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual"><img src="assets/project3.svg" alt="Project visual 3"></div>
+            <div class="project-content">
+              <h3>Markdown Optimization</h3>
+              <p>
+                AI-powered markdown processor for cleaning and optimizing documentation. Automated formatting, link validation, and structure improvements for technical content.
+              </p>
+              <div class="pill-wrap">
+                <span class="pill">NLP</span>
+                <span class="pill">Parsing</span>
+                <span class="pill">Automation</span>
+                <span class="pill">Python</span>
+              </div>
+              <a href="https://github.com/amit-jsr" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual"><img src="assets/project4.svg" alt="Project visual 4"></div>
+            <div class="project-content">
+              <h3>Resume Screening System</h3>
+              <p>
+                Semantic similarity-based candidate ranking system using custom Word2Vec embeddings. Automated resume parsing and matching against job requirements.
+              </p>
+              <div class="pill-wrap">
+                <span class="pill">NLP</span>
+                <span class="pill">Word2Vec</span>
+                <span class="pill">ML</span>
+                <span class="pill">Python</span>
+              </div>
+              <a href="https://github.com/amit-jsr" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual"><img src="assets/project5.svg" alt="Project visual 5"></div>
+            <div class="project-content">
+              <h3>Data Warehouse Platform</h3>
+              <p>
+                Enterprise DWH built on Snowflake with PySpark ETL pipelines on Databricks. Implemented SCD Type 1 & 2, data quality checks, and automated workflows.
+              </p>
+              <div class="pill-wrap">
+                <span class="pill">Snowflake</span>
+                <span class="pill">PySpark</span>
+                <span class="pill">Databricks</span>
+                <span class="pill">ETL</span>
+              </div>
+              <a href="https://github.com/amit-jsr" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Skills</h2>
+          <div class="underline"></div>
+          <p class="section-copy">
+            Expertise in AI/ML technologies, cloud platforms, and data engineering tools used in production environments.
+          </p>
+        </div>
+
+        <div class="cards-grid skill-grid">
+          <article class="skill-card reveal">
+            <h3><i class="fas fa-project-diagram"></i> Generative AI</h3>
+            <div class="pill-wrap">
+              <span class="pill">Prompt Engineering</span><span class="pill">RAG</span><span class="pill">Agentic AI</span>
+              <span class="pill">LangChain</span><span class="pill">Strands</span><span class="pill">Bedrock</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fas fa-network-wired"></i> ML & Deep Learning</h3>
+            <div class="pill-wrap">
+              <span class="pill">NLP</span><span class="pill">BERT</span><span class="pill">LSTM</span>
+              <span class="pill">TensorFlow</span><span class="pill">Scikit-learn</span><span class="pill">XGBoost</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+            <div class="pill-wrap">
+              <span class="pill">AWS</span><span class="pill">Azure</span><span class="pill">Docker</span>
+              <span class="pill">SageMaker</span><span class="pill">MLflow</span><span class="pill">GitHub</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fas fa-database"></i> Data Engineering</h3>
+            <div class="pill-wrap">
+              <span class="pill">Snowflake</span><span class="pill">Databricks</span><span class="pill">PySpark</span>
+              <span class="pill">ETL</span><span class="pill">SQL</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fas fa-code"></i> Programming</h3>
+            <div class="pill-wrap">
+              <span class="pill">Python</span><span class="pill">C</span><span class="pill">SQL</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fas fa-chart-line"></i> Analytics & BI</h3>
+            <div class="pill-wrap">
+              <span class="pill">PowerBI</span><span class="pill">Metabase</span><span class="pill">Statistics</span>
+              <span class="pill">Data Visualization</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Achievements</h2>
+          <div class="underline"></div>
+          <p class="section-copy">
+            Professional certifications, publications, and contributions to the AI/ML community.
+          </p>
+        </div>
+
+        <div class="achievements-top">
+          <p class="drag-text"><i class="fas fa-grip-lines-vertical"></i> Drag to explore</p>
+          <div class="slider-controls">
+            <button id="prevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <button id="nextBtn" aria-label="Next" class="active-btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <div class="slider-viewport">
+          <div class="slider-track" id="sliderTrack">
+            <article class="achievement-card">
+              <span class="year">2024</span>
+              <h3>AWS Certified ML Engineer</h3>
+              <p>AWS Certified Machine Learning – Specialty certification demonstrating expertise in ML on AWS.</p>
+              <div class="achievement-footer">
+                <span class="achievement-tag blue">Certification</span>
+                <a href="https://www.credly.com/badges/your-badge" target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </article>
+
+            <article class="achievement-card">
+              <span class="year">2024</span>
+              <h3>AWS AI Practitioner Certified</h3>
+              <p>Certified AWS AI Practitioner showcasing knowledge of AI services and best practices on AWS.</p>
+              <div class="achievement-footer">
+                <span class="achievement-tag blue">Certification</span>
+                <a href="https://www.credly.com/badges/your-badge" target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </article>
+
+            <article class="achievement-card">
+              <span class="year">2024</span>
+              <h3>Top Medium Contributor</h3>
+              <p>Recognized as top contributor in Data Science & Engineering with 20K+ views on published articles.</p>
+              <div class="achievement-footer">
+                <span class="achievement-tag gold">Achievement</span>
+                <a href="https://medium.com/@amit-jsr" target="_blank" class="cert-link">View Profile <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </article>
+
+            <article class="achievement-card">
+              <span class="year">2023</span>
+              <h3>SnowPro Core Certified</h3>
+              <p>SnowPro Core Certification demonstrating expertise in Snowflake data warehouse platform.</p>
+              <div class="achievement-footer">
+                <span class="achievement-tag blue">Certification</span>
+                <a href="https://www.credly.com/badges/your-badge" target="_blank" class="cert-link">View Badge ↗</a>
+              </div>
+            </article>
+
+            <article class="achievement-card">
+              <span class="year">2021</span>
+              <h3>Sarcasm Detection Research</h3>
+              <p>Published thesis on Sarcasm Detection using BERT, contributing to NLP research.</p>
+              <div class="achievement-footer">
+                <span class="achievement-tag green">Publication</span>
+                <a href="#" target="_blank" class="cert-link">Read Paper <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </article>
+
+            <article class="achievement-card">
+              <span class="year">2020-24</span>
+              <h3>100+ Technical Interviews</h3>
+              <p>Conducted 100+ technical interviews supporting Data Science and Engineering hiring initiatives.</p>
+              <span class="achievement-tag gold">Achievement</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Get In Touch</h2>
+          <div class="underline"></div>
+          <p class="section-copy">
+            Have a question or want to work together? Feel free to drop me a message. I'd love to hear from you!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3>Contact Information</h3>
+            <p>Fill up the form and I'll get back to you as soon as possible.</p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <strong>Email</strong>
+                  <span>jaiswaramit96@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                <div>
+                  <strong>Phone</strong>
+                  <span>+91 8604594615</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <strong>Location</strong>
+                  <span>Noida, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="connect-links">
+              <h4>Connect with me</h4>
+              <div class="socials">
+                <a href="https://github.com/amit-jsr" target="_blank" class="icon-btn"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/amit-jsr/" target="_blank" class="icon-btn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:jaiswaramit96@gmail.com" class="icon-btn"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card reveal">
+            <form id="contactForm">
+              <div class="two-col">
+                <div class="field">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="field">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="How can I help you?" required>
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary full"><i class="fas fa-paper-plane"></i> Send Message</button>
+              <p id="formStatus" class="form-status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#home" class="brand footer-brand">AJ.</a>
+        <p>Building intelligent AI systems and delivering data-driven solutions with a focus on innovation and technical excellence.</p>
+      </div>
+
+      <p class="footer-copy">© 2026 Amit Jaiswar | Built with HTML, CSS and JavaScript</p>
+
+      <div class="footer-icons">
+        <a href="https://github.com/amit-jsr" target="_blank" class="icon-btn dark"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/amit-jsr/" target="_blank" class="icon-btn dark"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:jaiswaramit96@gmail.com" class="icon-btn dark"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <a href="#top" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

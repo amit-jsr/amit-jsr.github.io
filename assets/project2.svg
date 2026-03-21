@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" fill="none">
+  <rect width="500" height="300" rx="24" fill="url(#g)"/>
+  <rect x="95" y="70" width="180" height="115" rx="14" transform="rotate(-8 95 70)" fill="#F8FBFF" stroke="#D9E6FF"/>
+  <rect x="110" y="86" width="150" height="18" rx="8" fill="#EAEFFB"/>
+  <rect x="110" y="115" width="70" height="56" rx="10" fill="#D6E4FF"/>
+  <rect x="188" y="115" width="68" height="8" rx="4" fill="#CEDCF8"/>
+  <rect x="188" y="130" width="56" height="8" rx="4" fill="#CEDCF8"/>
+  <rect x="188" y="145" width="48" height="8" rx="4" fill="#CEDCF8"/>
+  <rect x="245" y="105" width="180" height="120" rx="14" transform="rotate(7 245 105)" fill="#F8FBFF" stroke="#D9E6FF"/>
+  <rect x="260" y="120" width="150" height="24" rx="10" fill="#111827"/>
+  <rect x="260" y="154" width="90" height="50" rx="10" fill="#DBEAFE"/>
+  <rect x="358" y="154" width="52" height="8" rx="4" fill="#CEDCF8"/>
+  <rect x="358" y="170" width="36" height="8" rx="4" fill="#CEDCF8"/>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="500" y2="300"><stop stop-color="#2E6EF0"/><stop offset="1" stop-color="#4A8DFF"/></linearGradient></defs>
+</svg>
