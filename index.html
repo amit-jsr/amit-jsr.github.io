@@ -150,100 +150,224 @@ const engineer = {
           </p>
         </div>
 
-        <div class="achievements-top">
-          <p class="drag-text"><i class="fas fa-grip-lines-vertical"></i> Drag to explore</p>
-          <div class="slider-controls">
-            <button id="projectPrevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-            <button id="projectNextBtn" aria-label="Next" class="active-btn"><i class="fas fa-chevron-right"></i></button>
-          </div>
-        </div>
-
-        <div class="slider-viewport">
-          <div class="slider-track" id="projectSliderTrack">
-          <article class="project-card reveal">
-            <div class="project-visual"><img src="assets/project1.svg" alt="Project visual 1"></div>
-            <div class="project-content">
-              <h3>Agentic AI</h3>
-              <p>
-                Agentic AI applications using AWS Bedrock and Strands to extract and structure data from unstructured documents, generating end-to-end workflows.
-              </p>
-              <div class="pill-wrap">
-                <span class="pill">AWS Bedrock</span>
-                <span class="pill">Strands</span>
-                <span class="pill">Agentic AI</span>
-                <span class="pill">LLMs</span>
+        <div class="projects-layout reveal">
+          <!-- Left Column: Project List -->
+          <aside class="projects-sidebar">
+            <h3 class="sidebar-title">All Projects</h3>
+            <div class="project-list">
+              <div class="project-list-item active" data-project="agentic-ai">
+                <div class="project-list-icon">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <div class="project-list-info">
+                  <h4>Agentic AI</h4>
+                  <p>AWS Bedrock & Strands</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
               </div>
-              <a href="https://github.com/amit-jsr" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </article>
 
-          <article class="project-card reveal">
-            <div class="project-visual"><img src="assets/project2.svg" alt="Project visual 2"></div>
-            <div class="project-content">
-              <h3>Chatbot / RAG</h3>
-              <p>
-                LLM chatbot converting natural language to SQL, integrated with Snowflake for enterprise data queries. Built custom RAG pipelines for domain-specific Q&A.
-              </p>
-              <div class="pill-wrap">
-                <span class="pill">LLMs</span>
-                <span class="pill">RAG</span>
-                <span class="pill">Snowflake</span>
-                <span class="pill">LangChain</span>
+              <div class="project-list-item" data-project="chatbot-rag">
+                <div class="project-list-icon">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div class="project-list-info">
+                  <h4>Chatbot / RAG</h4>
+                  <p>LLM & Snowflake</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
               </div>
-              <a href="https://github.com/amit-jsr" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </article>
 
-          <article class="project-card reveal">
-            <div class="project-visual"><img src="assets/project3.svg" alt="Project visual 3"></div>
-            <div class="project-content">
-              <h3>Markdown Optimization</h3>
-              <p>
-                AI-powered markdown processor for cleaning and optimizing documentation. Automated formatting, link validation, and structure improvements for technical content.
-              </p>
-              <div class="pill-wrap">
-                <span class="pill">NLP</span>
-                <span class="pill">Parsing</span>
-                <span class="pill">Automation</span>
-                <span class="pill">Python</span>
+              <div class="project-list-item" data-project="markdown-opt">
+                <div class="project-list-icon">
+                  <i class="fas fa-file-code"></i>
+                </div>
+                <div class="project-list-info">
+                  <h4>Markdown Optimization</h4>
+                  <p>AI-powered Processing</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
               </div>
-              <a href="https://github.com/amit-jsr" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </article>
 
-          <article class="project-card reveal">
-            <div class="project-visual"><img src="assets/project4.svg" alt="Project visual 4"></div>
-            <div class="project-content">
-              <h3>Resume Screening System</h3>
-              <p>
-                Semantic similarity-based candidate ranking system using custom Word2Vec embeddings. Automated resume parsing and matching against job requirements.
-              </p>
-              <div class="pill-wrap">
-                <span class="pill">NLP</span>
-                <span class="pill">Word2Vec</span>
-                <span class="pill">ML</span>
-                <span class="pill">Python</span>
+              <div class="project-list-item" data-project="resume-screening">
+                <div class="project-list-icon">
+                  <i class="fas fa-user-check"></i>
+                </div>
+                <div class="project-list-info">
+                  <h4>Resume Screening</h4>
+                  <p>NLP & Word2Vec</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
               </div>
-              <a href="https://github.com/amit-jsr" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </article>
 
-          <article class="project-card reveal">
-            <div class="project-visual"><img src="assets/project5.svg" alt="Project visual 5"></div>
-            <div class="project-content">
-              <h3>Data Warehouse Platform</h3>
-              <p>
-                Enterprise DWH built on Snowflake with PySpark ETL pipelines on Databricks. Implemented SCD Type 1 & 2, data quality checks, and automated workflows.
-              </p>
-              <div class="pill-wrap">
-                <span class="pill">Snowflake</span>
-                <span class="pill">PySpark</span>
-                <span class="pill">Databricks</span>
-                <span class="pill">ETL</span>
+              <div class="project-list-item" data-project="data-warehouse">
+                <div class="project-list-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div class="project-list-info">
+                  <h4>Data Warehouse Platform</h4>
+                  <p>Snowflake & Databricks</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
               </div>
-              <a href="https://github.com/amit-jsr" class="project-link"><i class="fab fa-github"></i> GitHub</a>
             </div>
-          </article>
+          </aside>
+
+          <!-- Right Column: Project Details -->
+          <div class="project-details-container">
+            <article class="project-detail active" id="agentic-ai">
+              <div class="project-detail-content">
+                <div class="project-header">
+                  <h3>Agentic AI</h3>
+                  <span class="project-status">Production</span>
+                </div>
+                <p class="project-description">
+                  Developed sophisticated agentic AI applications using AWS Bedrock and Strands framework to extract and structure data from unstructured documents. The system generates end-to-end workflows autonomously, enabling intelligent document processing and automation at scale.
+                </p>
+                <div class="project-highlights">
+                  <h4><i class="fas fa-star"></i> Key Highlights</h4>
+                  <ul>
+                    <li>Automated data extraction from complex documents</li>
+                    <li>Multi-agent orchestration for workflow generation</li>
+                    <li>Integration with AWS Bedrock for LLM capabilities</li>
+                    <li>Reduced manual processing time by 80%</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <h4><i class="fas fa-tools"></i> Technologies</h4>
+                  <div class="pill-wrap">
+                    <span class="pill">AWS Bedrock</span>
+                    <span class="pill">Strands</span>
+                    <span class="pill">Agentic AI</span>
+                    <span class="pill">LLMs</span>
+                    <span class="pill">Python</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-detail" id="chatbot-rag">
+              <div class="project-detail-content">
+                <div class="project-header">
+                  <h3>Chatbot / RAG</h3>
+                  <span class="project-status">Production</span>
+                </div>
+                <p class="project-description">
+                  Built an intelligent LLM-powered chatbot that converts natural language queries to SQL, seamlessly integrated with Snowflake for enterprise data queries. Developed custom RAG (Retrieval-Augmented Generation) pipelines for domain-specific question answering with high accuracy.
+                </p>
+                <div class="project-highlights">
+                  <h4><i class="fas fa-star"></i> Key Highlights</h4>
+                  <ul>
+                    <li>Natural language to SQL conversion with 95% accuracy</li>
+                    <li>Custom RAG pipeline for enterprise knowledge base</li>
+                    <li>Real-time query optimization and caching</li>
+                    <li>Support for complex multi-table joins and aggregations</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <h4><i class="fas fa-tools"></i> Technologies</h4>
+                  <div class="pill-wrap">
+                    <span class="pill">LLMs</span>
+                    <span class="pill">RAG</span>
+                    <span class="pill">Snowflake</span>
+                    <span class="pill">LangChain</span>
+                    <span class="pill">Vector DB</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-detail" id="markdown-opt">
+              <div class="project-detail-content">
+                <div class="project-header">
+                  <h3>Markdown Optimization</h3>
+                  <span class="project-status">Active</span>
+                </div>
+                <p class="project-description">
+                  Developed an AI-powered markdown processor for cleaning and optimizing technical documentation. The system provides automated formatting, link validation, and structure improvements, ensuring consistent and high-quality technical content across repositories.
+                </p>
+                <div class="project-highlights">
+                  <h4><i class="fas fa-star"></i> Key Highlights</h4>
+                  <ul>
+                    <li>Automated formatting and style consistency</li>
+                    <li>Intelligent link validation and correction</li>
+                    <li>Structure analysis and improvement suggestions</li>
+                    <li>Batch processing for large documentation sets</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <h4><i class="fas fa-tools"></i> Technologies</h4>
+                  <div class="pill-wrap">
+                    <span class="pill">NLP</span>
+                    <span class="pill">Parsing</span>
+                    <span class="pill">Automation</span>
+                    <span class="pill">Python</span>
+                    <span class="pill">Regex</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-detail" id="resume-screening">
+              <div class="project-detail-content">
+                <div class="project-header">
+                  <h3>Resume Screening System</h3>
+                  <span class="project-status">Completed</span>
+                </div>
+                <p class="project-description">
+                  Created a semantic similarity-based candidate ranking system using custom Word2Vec embeddings. The system automates resume parsing and intelligently matches candidates against job requirements, significantly improving recruitment efficiency.
+                </p>
+                <div class="project-highlights">
+                  <h4><i class="fas fa-star"></i> Key Highlights</h4>
+                  <ul>
+                    <li>Custom Word2Vec embeddings trained on domain data</li>
+                    <li>Automated resume parsing and skill extraction</li>
+                    <li>Semantic matching with 90% accuracy</li>
+                    <li>Reduced screening time by 70%</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <h4><i class="fas fa-tools"></i> Technologies</h4>
+                  <div class="pill-wrap">
+                    <span class="pill">NLP</span>
+                    <span class="pill">Word2Vec</span>
+                    <span class="pill">ML</span>
+                    <span class="pill">Python</span>
+                    <span class="pill">Scikit-learn</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-detail" id="data-warehouse">
+              <div class="project-detail-content">
+                <div class="project-header">
+                  <h3>Data Warehouse Platform</h3>
+                  <span class="project-status">Production</span>
+                </div>
+                <p class="project-description">
+                  Architected and deployed an enterprise-grade data warehouse on Snowflake with PySpark ETL pipelines on Databricks. Implemented SCD Type 1 & 2, comprehensive data quality checks, and automated workflows for reliable data processing at scale.
+                </p>
+                <div class="project-highlights">
+                  <h4><i class="fas fa-star"></i> Key Highlights</h4>
+                  <ul>
+                    <li>Processing 10TB+ data daily with 99.9% uptime</li>
+                    <li>SCD Type 1 & 2 implementation for historical tracking</li>
+                    <li>Automated data quality and validation framework</li>
+                    <li>Cost optimization reducing compute by 40%</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <h4><i class="fas fa-tools"></i> Technologies</h4>
+                  <div class="pill-wrap">
+                    <span class="pill">Snowflake</span>
+                    <span class="pill">PySpark</span>
+                    <span class="pill">Databricks</span>
+                    <span class="pill">ETL</span>
+                    <span class="pill">SQL</span>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </div>

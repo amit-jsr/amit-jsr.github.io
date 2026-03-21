@@ -8,11 +8,12 @@ const reveals = document.querySelectorAll('.reveal');
 const sliderTrack = document.getElementById('sliderTrack');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
-const projectSliderTrack = document.getElementById('projectSliderTrack');
-const projectPrevBtn = document.getElementById('projectPrevBtn');
-const projectNextBtn = document.getElementById('projectNextBtn');
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
+
+// Project list and detail management
+const projectListItems = document.querySelectorAll('.project-list-item');
+const projectDetails = document.querySelectorAll('.project-detail');
 
 // Add entrance animations on page load
 window.addEventListener('load', () => {
@@ -101,8 +102,43 @@ const revealObserver = new IntersectionObserver(entries => {
 
 reveals.forEach(el => revealObserver.observe(el));
 
+// Project selection handler
+projectListItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const projectId = item.getAttribute('data-project');
+    
+    // Check if already active
+    if (item.classList.contains('active')) return;
+    
+    // Update active state on list items
+    projectListItems.forEach(listItem => listItem.classList.remove('active'));
+    item.classList.add('active');
+    
+    // Fade out current project
+    const currentActive = document.querySelector('.project-detail.active');
+    if (currentActive) {
+      currentActive.classList.remove('active');
+    }
+    
+    // Show new project
+    setTimeout(() => {
+      const newProject = document.getElementById(projectId);
+      if (newProject) {
+        newProject.classList.add('active');
+        
+        // On mobile/tablet, scroll to project details
+        if (window.innerWidth <= 1120) {
+          const container = document.querySelector('.project-details-container');
+          setTimeout(() => {
+            container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }, 100);
+        }
+      }
+    }, 150);
+  });
+});
+
 let sliderIndex = 0;
-let projectSliderIndex = 0;
 
 function getVisibleCards() {
   if (window.innerWidth <= 860) return 1;
@@ -146,42 +182,6 @@ function updateSlider() {
   }
 }
 
-function updateProjectSlider() {
-  const cards = projectSliderTrack.children.length;
-  const visible = getVisibleCards();
-  const maxIndex = Math.max(0, cards - visible);
-  projectSliderIndex = Math.max(0, Math.min(projectSliderIndex, maxIndex));
-
-  const gap = window.innerWidth <= 1120 ? 20 : 20;
-  const viewportWidth = projectSliderTrack.parentElement.clientWidth;
-  const cardWidth = visible === 1 ? viewportWidth : (viewportWidth - gap * (visible - 1)) / visible;
-  projectSliderTrack.style.transform = `translateX(-${projectSliderIndex * (cardWidth + gap)}px)`;
-
-  // Update button states
-  projectPrevBtn.disabled = projectSliderIndex === 0;
-  projectNextBtn.disabled = projectSliderIndex === maxIndex;
-  
-  // Update button styling
-  if (projectPrevBtn.disabled) {
-    projectPrevBtn.style.opacity = '.5';
-    projectPrevBtn.style.cursor = 'not-allowed';
-    projectPrevBtn.classList.remove('active-btn');
-  } else {
-    projectPrevBtn.style.opacity = '1';
-    projectPrevBtn.style.cursor = 'pointer';
-  }
-  
-  if (projectNextBtn.disabled) {
-    projectNextBtn.style.opacity = '.5';
-    projectNextBtn.style.cursor = 'not-allowed';
-    projectNextBtn.classList.remove('active-btn');
-  } else {
-    projectNextBtn.style.opacity = '1';
-    projectNextBtn.style.cursor = 'pointer';
-    projectNextBtn.classList.add('active-btn');
-  }
-}
-
 prevBtn?.addEventListener('click', () => {
   if (sliderIndex > 0) {
     sliderIndex -= 1;
@@ -200,32 +200,12 @@ nextBtn?.addEventListener('click', () => {
   }
 });
 
-projectPrevBtn?.addEventListener('click', () => {
-  if (projectSliderIndex > 0) {
-    projectSliderIndex -= 1;
-    updateProjectSlider();
-  }
-});
-
-projectNextBtn?.addEventListener('click', () => {
-  const cards = projectSliderTrack.children.length;
-  const visible = getVisibleCards();
-  const maxIndex = Math.max(0, cards - visible);
-  
-  if (projectSliderIndex < maxIndex) {
-    projectSliderIndex += 1;
-    updateProjectSlider();
-  }
-});
-
 window.addEventListener('resize', () => {
   updateSlider();
-  updateProjectSlider();
 });
 
 window.addEventListener('load', () => {
   updateSlider();
-  updateProjectSlider();
 });
 
 // Add keyboard navigation for slider
