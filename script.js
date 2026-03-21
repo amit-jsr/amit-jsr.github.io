@@ -234,6 +234,13 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// Scroll to top button
+const scrollTopBtn = document.querySelector('.scroll-top');
+scrollTopBtn?.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 contactForm?.addEventListener('submit', (e) => {
   e.preventDefault();
   const data = new FormData(contactForm);

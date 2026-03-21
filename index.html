@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=20260321" />
+  <link rel="stylesheet" href="style.css?v=20260322" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -153,11 +153,10 @@ const engineer = {
         <div class="projects-layout reveal">
           <!-- Left Column: Project List -->
           <aside class="projects-sidebar">
-            <h3 class="sidebar-title">All Projects</h3>
             <div class="project-list">
               <div class="project-list-item active" data-project="agentic-ai">
                 <div class="project-list-icon">
-                  <i class="fas fa-robot"></i>
+                  <i class="fas fa-brain"></i>
                 </div>
                 <div class="project-list-info">
                   <h4>Agentic AI</h4>
@@ -177,13 +176,46 @@ const engineer = {
                 <i class="fas fa-chevron-right"></i>
               </div>
 
-              <div class="project-list-item" data-project="markdown-opt">
+              <div class="project-list-item" data-project="text2sql">
                 <div class="project-list-icon">
-                  <i class="fas fa-file-code"></i>
+                  <i class="fas fa-language"></i>
                 </div>
                 <div class="project-list-info">
-                  <h4>Markdown Optimization</h4>
-                  <p>AI-powered Processing</p>
+                  <h4>Text2SQL</h4>
+                  <p>NL to SQL Conversion</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+
+              <div class="project-list-item" data-project="markdown-opt">
+                <div class="project-list-icon">
+                  <i class="fas fa-usd"></i>
+                </div>
+                <div class="project-list-info">
+                  <h4>Price Optimization</h4>
+                  <p>ML & Pricing Strategy</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+
+              <div class="project-list-item" data-project="data-warehouse">
+                <div class="project-list-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div class="project-list-info">
+                  <h4>Data Warehouse Platform</h4>
+                  <p>Snowflake & Databricks</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+
+              <div class="project-list-item" data-project="scd-pipelines">
+                <div class="project-list-icon">
+                  <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="project-list-info">
+                  <h4>SCD Pipelines</h4>
+                  <p>ETL & Data Quality</p>
                 </div>
                 <i class="fas fa-chevron-right"></i>
               </div>
@@ -199,13 +231,35 @@ const engineer = {
                 <i class="fas fa-chevron-right"></i>
               </div>
 
-              <div class="project-list-item" data-project="data-warehouse">
+              <div class="project-list-item" data-project="sales-prediction">
                 <div class="project-list-icon">
-                  <i class="fas fa-database"></i>
+                  <i class="fas fa-chart-line"></i>
                 </div>
                 <div class="project-list-info">
-                  <h4>Data Warehouse Platform</h4>
-                  <p>Snowflake & Databricks</p>
+                  <h4>Sales Prediction</h4>
+                  <p>ML & Forecasting</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+
+              <div class="project-list-item" data-project="sarcasm-detection">
+                <div class="project-list-icon">
+                  <i class="fas fa-smile-wink"></i>
+                </div>
+                <div class="project-list-info">
+                  <h4>Sarcasm Detection</h4>
+                  <p>BERT & NLP</p>
+                </div>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+
+              <div class="project-list-item" data-project="image-colorization">
+                <div class="project-list-icon">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <div class="project-list-info">
+                  <h4>Image Colorization</h4>
+                  <p>CNN & Deep Learning</p>
                 </div>
                 <i class="fas fa-chevron-right"></i>
               </div>
@@ -218,7 +272,7 @@ const engineer = {
               <div class="project-detail-content">
                 <div class="project-header">
                   <h3>Agentic AI</h3>
-                  <span class="project-status">Production</span>
+                  <span class="project-status production">Work · Production</span>
                 </div>
                 <p class="project-description">
                   Developed sophisticated agentic AI applications using AWS Bedrock and Strands framework to extract and structure data from unstructured documents. The system generates end-to-end workflows autonomously, enabling intelligent document processing and automation at scale.
@@ -249,18 +303,18 @@ const engineer = {
               <div class="project-detail-content">
                 <div class="project-header">
                   <h3>Chatbot / RAG</h3>
-                  <span class="project-status">Production</span>
+                  <span class="project-status production">Work · Production</span>
                 </div>
                 <p class="project-description">
-                  Built an intelligent LLM-powered chatbot that converts natural language queries to SQL, seamlessly integrated with Snowflake for enterprise data queries. Developed custom RAG (Retrieval-Augmented Generation) pipelines for domain-specific question answering with high accuracy.
+                  Built an intelligent conversational AI chatbot powered by LLMs and custom RAG (Retrieval-Augmented Generation) pipelines. The system enables domain-specific question answering by retrieving relevant context from enterprise knowledge bases, delivering accurate and grounded responses in real time.
                 </p>
                 <div class="project-highlights">
                   <h4><i class="fas fa-star"></i> Key Highlights</h4>
                   <ul>
-                    <li>Natural language to SQL conversion with 95% accuracy</li>
-                    <li>Custom RAG pipeline for enterprise knowledge base</li>
-                    <li>Real-time query optimization and caching</li>
-                    <li>Support for complex multi-table joins and aggregations</li>
+                    <li>Custom RAG pipeline over enterprise knowledge base</li>
+                    <li>Context-aware multi-turn conversation handling</li>
+                    <li>Semantic search with vector embeddings for accurate retrieval</li>
+                    <li>Reduced support resolution time by 60%</li>
                   </ul>
                 </div>
                 <div class="project-tech">
@@ -268,9 +322,41 @@ const engineer = {
                   <div class="pill-wrap">
                     <span class="pill">LLMs</span>
                     <span class="pill">RAG</span>
-                    <span class="pill">Snowflake</span>
                     <span class="pill">LangChain</span>
                     <span class="pill">Vector DB</span>
+                    <span class="pill">Python</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-detail" id="text2sql">
+              <div class="project-detail-content">
+                <div class="project-header">
+                  <h3>Text2SQL</h3>
+                  <span class="project-status poc">Work · POC</span>
+                </div>
+                <p class="project-description">
+                  Built an advanced natural language to SQL conversion system enabling non-technical users to query databases using plain English. Leveraged LLMs and custom prompt engineering to translate complex business questions into accurate SQL queries with support for multi-table joins and aggregations.
+                </p>
+                <div class="project-highlights">
+                  <h4><i class="fas fa-star"></i> Key Highlights</h4>
+                  <ul>
+                    <li>Natural language query understanding with 95% accuracy</li>
+                    <li>Support for complex joins, subqueries, and aggregations</li>
+                    <li>Integrated with enterprise databases (Snowflake, PostgreSQL)</li>
+                    <li>Reduced query writing time from hours to seconds</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <h4><i class="fas fa-tools"></i> Technologies</h4>
+                  <div class="pill-wrap">
+                    <span class="pill">LLMs</span>
+                    <span class="pill">Prompt Engineering</span>
+                    <span class="pill">SQL</span>
+                    <span class="pill">Python</span>
+                    <span class="pill">Snowflake</span>
+                    <span class="pill">LangChain</span>
                   </div>
                 </div>
               </div>
@@ -279,29 +365,92 @@ const engineer = {
             <article class="project-detail" id="markdown-opt">
               <div class="project-detail-content">
                 <div class="project-header">
-                  <h3>Markdown Optimization</h3>
-                  <span class="project-status">Active</span>
+                  <h3>Price Optimization</h3>
+                  <span class="project-status production">Work · Production</span>
                 </div>
                 <p class="project-description">
-                  Developed an AI-powered markdown processor for cleaning and optimizing technical documentation. The system provides automated formatting, link validation, and structure improvements, ensuring consistent and high-quality technical content across repositories.
+                  Built an ML-powered price optimization system to dynamically adjust pricing strategies based on demand, competition, and market trends. The system analyzes historical sales data and external signals to recommend optimal price points, maximizing revenue and maintaining competitiveness.
                 </p>
                 <div class="project-highlights">
                   <h4><i class="fas fa-star"></i> Key Highlights</h4>
                   <ul>
-                    <li>Automated formatting and style consistency</li>
-                    <li>Intelligent link validation and correction</li>
-                    <li>Structure analysis and improvement suggestions</li>
-                    <li>Batch processing for large documentation sets</li>
+                    <li>Dynamic pricing engine with real-time market analysis</li>
+                    <li>Revenue uplift of 18% through optimal price recommendations</li>
+                    <li>Integrated competitor pricing and demand elasticity models</li>
+                    <li>Automated price adjustment with business rule constraints</li>
                   </ul>
                 </div>
                 <div class="project-tech">
                   <h4><i class="fas fa-tools"></i> Technologies</h4>
                   <div class="pill-wrap">
-                    <span class="pill">NLP</span>
-                    <span class="pill">Parsing</span>
-                    <span class="pill">Automation</span>
+                    <span class="pill">ML</span>
                     <span class="pill">Python</span>
-                    <span class="pill">Regex</span>
+                    <span class="pill">XGBoost</span>
+                    <span class="pill">Optimization</span>
+                    <span class="pill">Pandas</span>
+                    <span class="pill">Scikit-learn</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-detail" id="data-warehouse">
+              <div class="project-detail-content">
+                <div class="project-header">
+                  <h3>Data Warehouse Platform</h3>
+                  <span class="project-status production">Work · Production</span>
+                </div>
+                <p class="project-description">
+                  Architected and deployed an enterprise-grade data warehouse on Snowflake, serving as the single source of truth for business analytics. Built end-to-end reporting layers integrated with Power BI and Metabase, enabling self-serve analytics and real-time dashboards for business stakeholders.
+                </p>
+                <div class="project-highlights">
+                  <h4><i class="fas fa-star"></i> Key Highlights</h4>
+                  <ul>
+                    <li>Designed star/snowflake schema for optimized analytical queries</li>
+                    <li>Built Power BI and Metabase dashboards for business reporting</li>
+                    <li>Enabled self-serve analytics reducing ad-hoc requests by 50%</li>
+                    <li>Cost optimization reducing compute by 40%</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <h4><i class="fas fa-tools"></i> Technologies</h4>
+                  <div class="pill-wrap">
+                    <span class="pill">Snowflake</span>
+                    <span class="pill">Power BI</span>
+                    <span class="pill">Metabase</span>
+                    <span class="pill">SQL</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-detail" id="scd-pipelines">
+              <div class="project-detail-content">
+                <div class="project-header">
+                  <h3>SCD Pipelines</h3>
+                  <span class="project-status production">Work · Production</span>
+                </div>
+                <p class="project-description">
+                  Designed and implemented robust data management pipelines handling Slowly Changing Dimensions (SCD) and Change Data Capture (CDC) for enterprise data workflows. Built automated validation frameworks to ensure data consistency and accuracy across dimensional models at scale.
+                </p>
+                <div class="project-highlights">
+                  <h4><i class="fas fa-star"></i> Key Highlights</h4>
+                  <ul>
+                    <li>SCD Type 1 & Type 2 pipelines for full historical tracking</li>
+                    <li>CDC implementation for real-time incremental data sync</li>
+                    <li>Processed millions of records daily with 99.9% accuracy</li>
+                    <li>Reduced data anomalies by 85% through automated validation</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <h4><i class="fas fa-tools"></i> Technologies</h4>
+                  <div class="pill-wrap">
+                    <span class="pill">PySpark</span>
+                    <span class="pill">Databricks</span>
+                    <span class="pill">SQL</span>
+                    <span class="pill">ETL</span>
+                    <span class="pill">CDC</span>
+                    <span class="pill">Python</span>
                   </div>
                 </div>
               </div>
@@ -311,7 +460,7 @@ const engineer = {
               <div class="project-detail-content">
                 <div class="project-header">
                   <h3>Resume Screening System</h3>
-                  <span class="project-status">Completed</span>
+                  <span class="project-status internal">Work · Internal</span>
                 </div>
                 <p class="project-description">
                   Created a semantic similarity-based candidate ranking system using custom Word2Vec embeddings. The system automates resume parsing and intelligently matches candidates against job requirements, significantly improving recruitment efficiency.
@@ -338,32 +487,97 @@ const engineer = {
               </div>
             </article>
 
-            <article class="project-detail" id="data-warehouse">
+            <article class="project-detail" id="sales-prediction">
               <div class="project-detail-content">
                 <div class="project-header">
-                  <h3>Data Warehouse Platform</h3>
-                  <span class="project-status">Production</span>
+                  <h3>Sales Prediction</h3>
+                  <span class="project-status poc">Work · POC</span>
                 </div>
                 <p class="project-description">
-                  Architected and deployed an enterprise-grade data warehouse on Snowflake with PySpark ETL pipelines on Databricks. Implemented SCD Type 1 & 2, comprehensive data quality checks, and automated workflows for reliable data processing at scale.
+                  Created a machine learning-based sales forecasting system to predict future sales trends and patterns. Implemented ensemble models combining multiple algorithms to achieve high accuracy predictions, enabling data-driven inventory management and business planning decisions.
                 </p>
                 <div class="project-highlights">
                   <h4><i class="fas fa-star"></i> Key Highlights</h4>
                   <ul>
-                    <li>Processing 10TB+ data daily with 99.9% uptime</li>
-                    <li>SCD Type 1 & 2 implementation for historical tracking</li>
-                    <li>Automated data quality and validation framework</li>
-                    <li>Cost optimization reducing compute by 40%</li>
+                    <li>Ensemble ML models achieving 88% prediction accuracy</li>
+                    <li>Time series analysis with seasonal trend decomposition</li>
+                    <li>Feature engineering from historical sales data</li>
+                    <li>Reduced inventory costs by 25% through accurate forecasting</li>
                   </ul>
                 </div>
                 <div class="project-tech">
                   <h4><i class="fas fa-tools"></i> Technologies</h4>
                   <div class="pill-wrap">
-                    <span class="pill">Snowflake</span>
-                    <span class="pill">PySpark</span>
-                    <span class="pill">Databricks</span>
-                    <span class="pill">ETL</span>
-                    <span class="pill">SQL</span>
+                    <span class="pill">ML</span>
+                    <span class="pill">XGBoost</span>
+                    <span class="pill">Random Forest</span>
+                    <span class="pill">Time Series</span>
+                    <span class="pill">Python</span>
+                    <span class="pill">Scikit-learn</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-detail" id="sarcasm-detection">
+              <div class="project-detail-content">
+                <div class="project-header">
+                  <h3>Sarcasm Detection</h3>
+                  <span class="project-status research">Research</span>
+                </div>
+                <p class="project-description">
+                  Developed a sophisticated sarcasm detection system using BERT-based models for identifying sarcastic content in text. Implemented as part of MTech thesis research, achieving state-of-the-art performance through fine-tuned transformer models and multi-layer architectures with sentiment analysis integration.
+                </p>
+                <div class="project-highlights">
+                  <h4><i class="fas fa-star"></i> Key Highlights</h4>
+                  <ul>
+                    <li>Fine-tuned BERT model achieving 92% accuracy on benchmark datasets</li>
+                    <li>Implemented multiple architectures: BERT-base, BERT-CNN, BERT-LSTM</li>
+                    <li>Integrated VADER sentiment analysis for enhanced detection</li>
+                    <li>Published MTech thesis with novel multi-layer approach</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <h4><i class="fas fa-tools"></i> Technologies</h4>
+                  <div class="pill-wrap">
+                    <span class="pill">BERT</span>
+                    <span class="pill">Transformers</span>
+                    <span class="pill">PyTorch</span>
+                    <span class="pill">NLP</span>
+                    <span class="pill">Python</span>
+                    <span class="pill">VADER</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-detail" id="image-colorization">
+              <div class="project-detail-content">
+                <div class="project-header">
+                  <h3>Image Colorization</h3>
+                  <span class="project-status research">Academic</span>
+                </div>
+                <p class="project-description">
+                  Developed a deep learning system to automatically colorize black and white images using Convolutional Neural Networks. The model learns color patterns from large datasets and applies realistic colorization to grayscale images, useful for restoring historical photographs and archival content.
+                </p>
+                <div class="project-highlights">
+                  <h4><i class="fas fa-star"></i> Key Highlights</h4>
+                  <ul>
+                    <li>CNN-based architecture for automatic colorization</li>
+                    <li>Trained on large-scale image datasets</li>
+                    <li>Realistic color reconstruction for diverse image types</li>
+                    <li>Evaluated using PSNR and SSIM perceptual quality metrics</li>
+                  </ul>
+                </div>
+                <div class="project-tech">
+                  <h4><i class="fas fa-tools"></i> Technologies</h4>
+                  <div class="pill-wrap">
+                    <span class="pill">CNN</span>
+                    <span class="pill">Deep Learning</span>
+                    <span class="pill">TensorFlow</span>
+                    <span class="pill">Keras</span>
+                    <span class="pill">Python</span>
+                    <span class="pill">OpenCV</span>
                   </div>
                 </div>
               </div>
@@ -385,7 +599,7 @@ const engineer = {
 
         <div class="cards-grid skill-grid">
           <article class="skill-card reveal">
-            <h3><i class="fas fa-project-diagram"></i> Generative AI</h3>
+            <h3><i class="fas fa-bolt"></i> Generative AI</h3>
             <div class="pill-wrap">
               <span class="pill">Prompt Engineering</span><span class="pill">RAG</span><span class="pill">Agentic AI</span>
               <span class="pill">LangChain</span><span class="pill">Strands</span><span class="pill">Bedrock</span>
@@ -601,7 +815,7 @@ const engineer = {
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a href="#home" class="brand footer-brand">AJ.</a>
+        <a href="#home" class="brand footer-brand">@AMIT</a>
         <p>Building intelligent AI systems and delivering data-driven solutions with a focus on innovation and technical excellence.</p>
       </div>
 
@@ -617,6 +831,6 @@ const engineer = {
     <a href="#top" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
   </footer>
 
-  <script src="script.js?v=20260321"></script>
+  <script src="script.js?v=20260322"></script>
 </body>
 </html>
