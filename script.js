@@ -5,9 +5,6 @@ const navMenu = document.getElementById('navMenu');
 const navLinks = [...document.querySelectorAll('.nav-link')];
 const sections = [...document.querySelectorAll('main section[id]')];
 const reveals = document.querySelectorAll('.reveal');
-const sliderTrack = document.getElementById('sliderTrack');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 
@@ -128,93 +125,6 @@ projectListItems.forEach(item => {
       }
     }
   });
-});
-
-let sliderIndex = 0;
-
-function getVisibleCards() {
-  if (window.innerWidth <= 860) return 1;
-  if (window.innerWidth <= 1120) return 2;
-  return 3;
-}
-
-function updateSlider() {
-  const cards = sliderTrack.children.length;
-  const visible = getVisibleCards();
-  const maxIndex = Math.max(0, cards - visible);
-  sliderIndex = Math.max(0, Math.min(sliderIndex, maxIndex));
-
-  const gap = window.innerWidth <= 1120 ? 20 : 20;
-  const viewportWidth = sliderTrack.parentElement.clientWidth;
-  const cardWidth = visible === 1 ? viewportWidth : (viewportWidth - gap * (visible - 1)) / visible;
-  sliderTrack.style.transform = `translateX(-${sliderIndex * (cardWidth + gap)}px)`;
-
-  // Update button states
-  prevBtn.disabled = sliderIndex === 0;
-  nextBtn.disabled = sliderIndex === maxIndex;
-  
-  // Update button styling
-  if (prevBtn.disabled) {
-    prevBtn.style.opacity = '.5';
-    prevBtn.style.cursor = 'not-allowed';
-    prevBtn.classList.remove('active-btn');
-  } else {
-    prevBtn.style.opacity = '1';
-    prevBtn.style.cursor = 'pointer';
-  }
-  
-  if (nextBtn.disabled) {
-    nextBtn.style.opacity = '.5';
-    nextBtn.style.cursor = 'not-allowed';
-    nextBtn.classList.remove('active-btn');
-  } else {
-    nextBtn.style.opacity = '1';
-    nextBtn.style.cursor = 'pointer';
-    nextBtn.classList.add('active-btn');
-  }
-}
-
-prevBtn?.addEventListener('click', () => {
-  if (sliderIndex > 0) {
-    sliderIndex -= 1;
-    updateSlider();
-  }
-});
-
-nextBtn?.addEventListener('click', () => {
-  const cards = sliderTrack.children.length;
-  const visible = getVisibleCards();
-  const maxIndex = Math.max(0, cards - visible);
-  
-  if (sliderIndex < maxIndex) {
-    sliderIndex += 1;
-    updateSlider();
-  }
-});
-
-window.addEventListener('resize', () => {
-  updateSlider();
-});
-
-window.addEventListener('load', () => {
-  updateSlider();
-});
-
-// Add keyboard navigation for slider
-document.addEventListener('keydown', (e) => {
-  const achievementSection = document.getElementById('achievements');
-  const rect = achievementSection?.getBoundingClientRect();
-  
-  // Only handle arrow keys if achievements section is in view
-  if (rect && rect.top < window.innerHeight && rect.bottom > 0) {
-    if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      prevBtn?.click();
-    } else if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      nextBtn?.click();
-    }
-  }
 });
 
 // Add subtle parallax effect to hero card
