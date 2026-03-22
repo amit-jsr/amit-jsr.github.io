@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=20260322" />
+  <link rel="stylesheet" href="style.css?v=20260329" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -93,7 +93,7 @@ const engineer = {
               <p>
                 Senior AI Engineer with over 4.5 years of experience in generative AI, NLP, and machine learning. 
                 Specializing in building agentic AI systems and delivering data-driven solutions to complex business 
-                challenges. Expert in AWS Bedrock, LangChain, and modern ML frameworks.
+                challenges. Expert in AWS Bedrock, LangChain, and modern AI frameworks.
               </p>
             </div>
 
@@ -599,38 +599,6 @@ const engineer = {
 
         <div class="cards-grid skill-grid">
           <article class="skill-card reveal">
-            <h3><i class="fas fa-bolt"></i> Generative AI</h3>
-            <div class="pill-wrap">
-              <span class="pill">Prompt Engineering</span><span class="pill">RAG</span><span class="pill">Agentic AI</span>
-              <span class="pill">LangChain</span><span class="pill">Strands</span><span class="pill">Bedrock</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3><i class="fas fa-network-wired"></i> ML & Deep Learning</h3>
-            <div class="pill-wrap">
-              <span class="pill">NLP</span><span class="pill">BERT</span><span class="pill">LSTM</span>
-              <span class="pill">TensorFlow</span><span class="pill">Scikit-learn</span><span class="pill">XGBoost</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-            <div class="pill-wrap">
-              <span class="pill">AWS</span><span class="pill">Azure</span><span class="pill">Docker</span>
-              <span class="pill">SageMaker</span><span class="pill">MLflow</span><span class="pill">GitHub</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3><i class="fas fa-database"></i> Data Engineering</h3>
-            <div class="pill-wrap">
-              <span class="pill">Snowflake</span><span class="pill">Databricks</span><span class="pill">PySpark</span>
-              <span class="pill">ETL</span><span class="pill">SQL</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
             <h3><i class="fas fa-code"></i> Programming</h3>
             <div class="pill-wrap">
               <span class="pill">Python</span><span class="pill">C</span><span class="pill">SQL</span>
@@ -638,10 +606,44 @@ const engineer = {
           </article>
 
           <article class="skill-card reveal">
-            <h3><i class="fas fa-chart-line"></i> Analytics & BI</h3>
+            <h3><i class="fas fa-bolt"></i> Generative AI</h3>
             <div class="pill-wrap">
-              <span class="pill">PowerBI</span><span class="pill">Metabase</span><span class="pill">Statistics</span>
-              <span class="pill">Data Visualization</span>
+              <span class="pill">Prompt Engineering</span><span class="pill">RAG</span><span class="pill">Agentic AI</span>
+              <span class="pill">LangChain</span><span class="pill">Strands</span><span class="pill">Bedrock-Agent</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fas fa-network-wired"></i> ML & Deep Learning</h3>
+            <div class="pill-wrap">
+              <span class="pill">Random Forest</span><span class="pill">XGBoost</span><span class="pill">Scikit-learn</span>
+              <span class="pill">NLP</span><span class="pill">BERT</span><span class="pill">TensorFlow</span>
+              <span class="pill">Probability</span><span class="pill">Statistics</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fas fa-database"></i> Data Engineering</h3>
+            <div class="pill-wrap">
+              <span class="pill">Snowflake</span><span class="pill">Databricks</span><span class="pill">SQL</span><span class="pill">PostgreSQL</span>
+              <span class="pill">SCD1 & SCD2</span><span class="pill">PySpark</span><span class="pill">PowerBI</span><span class="pill">Metabase</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fas fa-cloud"></i> Cloud Technology</h3>
+            <div class="pill-wrap">
+              <span class="pill">AWS</span>
+              <span class="pill">SageMaker</span><span class="pill">Bedrock</span><span class="pill">Docker</span>
+              <span class="pill">S3</span><span class="pill">Lambda</span><span class="pill">DynamoDB</span><span class="pill">RDS</span><span class="pill">IAM</span><span class="pill">Azure*</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fas fa-tools"></i> Development Tools</h3>
+            <div class="pill-wrap">
+              <span class="pill">GitHub</span><span class="pill">Linux</span>
+              <span class="pill">VS Code</span><span class="pill">Docker</span>
             </div>
           </article>
         </div>
@@ -658,23 +660,17 @@ const engineer = {
           </p>
         </div>
 
-        <div class="achievements-top">
-          <p class="drag-text"><i class="fas fa-grip-lines-vertical"></i> Drag to explore</p>
-          <div class="slider-controls">
-            <button id="prevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-            <button id="nextBtn" aria-label="Next" class="active-btn"><i class="fas fa-chevron-right"></i></button>
-          </div>
-        </div>
-
-        <div class="slider-viewport">
-          <div class="slider-track" id="sliderTrack">
+        <!-- Certifications -->
+        <div class="achievement-group reveal">
+          <h3 class="achievement-group-title"><i class="fas fa-certificate"></i> Certifications</h3>
+          <div class="achievement-group-grid">
             <article class="achievement-card">
               <span class="year">2024</span>
-              <h3>AWS Certified ML Engineer</h3>
-              <p>AWS Certified Machine Learning – Specialty certification demonstrating expertise in ML on AWS.</p>
+              <h3>AWS Certified ML – Associate</h3>
+              <p>AWS Certified Machine Learning – Associate certification demonstrating expertise in ML on AWS.</p>
               <div class="achievement-footer">
                 <span class="achievement-tag blue">Certification</span>
-                <a href="https://www.credly.com/badges/your-badge" target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://www.credly.com/badges/258c65f7-8b64-4d5a-aab1-343c321ab4c2/public_url" target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
               </div>
             </article>
 
@@ -684,10 +680,36 @@ const engineer = {
               <p>Certified AWS AI Practitioner showcasing knowledge of AI services and best practices on AWS.</p>
               <div class="achievement-footer">
                 <span class="achievement-tag blue">Certification</span>
-                <a href="https://www.credly.com/badges/your-badge" target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://www.credly.com/badges/3ce4a204-8aa6-47a9-9e82-d1a2ea89c60b/public_url" target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
               </div>
             </article>
 
+            <article class="achievement-card">
+              <span class="year">2023</span>
+              <h3>SnowPro Core Certified</h3>
+              <p>SnowPro Core Certification demonstrating expertise in Snowflake data warehouse platform.</p>
+              <div class="achievement-footer">
+                <span class="achievement-tag blue">Certification</span>
+                <a href="https://www.credly.com/badges/e477ddb8-8487-4a9e-9e60-00e74e3d2f62/public_url" target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </article>
+
+            <article class="achievement-card">
+              <span class="year">2024</span>
+              <h3>Databricks Generative AI Badge</h3>
+              <p>Databricks credential validating proficiency in Generative AI concepts and workflows on the Databricks platform.</p>
+              <div class="achievement-footer">
+                <span class="achievement-tag blue">Certification</span>
+                <a href="https://credentials.databricks.com/31b6cf19-e40b-47ee-8a29-7f39fb72303f" target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Highlights -->
+        <div class="achievement-group reveal">
+          <h3 class="achievement-group-title"><i class="fas fa-trophy"></i> Highlights</h3>
+          <div class="achievement-group-grid">
             <article class="achievement-card">
               <span class="year">2024</span>
               <h3>Top Medium Contributor</h3>
@@ -699,30 +721,32 @@ const engineer = {
             </article>
 
             <article class="achievement-card">
-              <span class="year">2023</span>
-              <h3>SnowPro Core Certified</h3>
-              <p>SnowPro Core Certification demonstrating expertise in Snowflake data warehouse platform.</p>
-              <div class="achievement-footer">
-                <span class="achievement-tag blue">Certification</span>
-                <a href="https://www.credly.com/badges/your-badge" target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
-              </div>
-            </article>
-
-            <article class="achievement-card">
               <span class="year">2021</span>
               <h3>Sarcasm Detection Research</h3>
-              <p>Published thesis on Sarcasm Detection using BERT, contributing to NLP research.</p>
+              <p>Published MTech thesis on Sarcasm Detection using BERT, contributing to NLP research.</p>
               <div class="achievement-footer">
                 <span class="achievement-tag green">Publication</span>
-                <a href="#" target="_blank" class="cert-link">Read Paper <i class="fas fa-external-link-alt"></i></a>
+                <a href="https://dspace.isical.ac.in/jspui/bitstream/10263/7294/1/Amit%20Jaiswar-cs-19-21.pdf" target="_blank" class="cert-link">Read Paper <i class="fas fa-external-link-alt"></i></a>
               </div>
             </article>
 
             <article class="achievement-card">
-              <span class="year">2020-24</span>
+              <span class="year">2020–24</span>
               <h3>100+ Technical Interviews</h3>
               <p>Conducted 100+ technical interviews supporting Data Science and Engineering hiring initiatives.</p>
-              <span class="achievement-tag gold">Achievement</span>
+              <div class="achievement-footer">
+                <span class="achievement-tag gold">Achievement</span>
+              </div>
+            </article>
+
+            <article class="achievement-card">
+              <span class="year">2024</span>
+              <h3>SQL Advanced – HackerRank</h3>
+              <p>Earned HackerRank SQL Advanced certification demonstrating mastery of complex queries, aggregations, and database operations.</p>
+              <div class="achievement-footer">
+                <span class="achievement-tag gold">Achievement</span>
+                <a href="https://www.hackerrank.com/certificates/d04d199f0e3b" target="_blank" class="cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
+              </div>
             </article>
           </div>
         </div>
