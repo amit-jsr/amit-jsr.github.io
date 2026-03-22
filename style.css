@@ -812,11 +812,6 @@ a {
   background: #def7e7;
   color: #238b46;
 }
-/* Completed — blue */
-.project-status.completed {
-  background: #dbeafe;
-  color: #1d4ed8;
-}
 /* Dissertation / Research — purple */
 .project-status.research {
   background: #ede9fe;
@@ -826,16 +821,6 @@ a {
 .project-status.poc {
   background: #fff3e0;
   color: #b45309;
-}
-/* Self Project — pink */
-.project-status.self {
-  background: #fce7f3;
-  color: #be185d;
-}
-/* Archived — gray */
-.project-status.archived {
-  background: #f1f5f9;
-  color: #64748b;
 }
 /* Internal — teal */
 .project-status.internal {

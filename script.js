@@ -51,6 +51,8 @@ themeToggle?.addEventListener('click', () => {
 
 menuToggle?.addEventListener('click', () => {
   navMenu.classList.toggle('open');
+  const isOpen = navMenu.classList.contains('open');
+  menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
 });
 
 // Smooth scroll to sections when clicking nav links
@@ -151,13 +153,14 @@ scrollTopBtn?.addEventListener('click', (e) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-contactForm?.addEventListener('submit', (e) => {
+contactForm?.addEventListener('submit', async (e) => {
   e.preventDefault();
   const data = new FormData(contactForm);
   const name = data.get('name').trim();
   const email = data.get('email').trim();
   const subject = data.get('subject').trim();
   const message = data.get('message').trim();
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
 
   // Clear previous status
   if (formStatus) formStatus.textContent = '';
@@ -181,17 +184,42 @@ contactForm?.addEventListener('submit', (e) => {
     return;
   }
 
-  const mailto = `mailto:jaiswaramit96@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\n\n${message}`
-  )}`;
-  
-  if (formStatus) {
-    formStatus.textContent = 'Opening your email app...';
-    formStatus.style.color = '#10b981';
+  // Disable button while sending
+  if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
+  if (formStatus) { formStatus.textContent = ''; }
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: '37ac4820-0f57-442a-9d0f-415ef8d46584',
+        name, email, subject, message,
+        from_name: 'Portfolio Enquiry',
+        botcheck: ''
+      })
+    });
+
+    const result = await res.json();
+
+    if (result.success) {
+      if (formStatus) {
+        formStatus.textContent = '✅ Message sent! I\'ll get back to you soon.';
+        formStatus.style.color = '#10b981';
+      }
+      contactForm.reset();
+      // Auto-clear success message after 5s
+      setTimeout(() => { if (formStatus) formStatus.textContent = ''; }, 5000);
+    } else {
+      throw new Error(result.message);
+    }
+  } catch {
+    if (formStatus) {
+      formStatus.textContent = '❌ Something went wrong. Please try again.';
+      formStatus.style.color = '#ef4444';
+    }
+  } finally {
+    // Re-enable button
+    if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message'; }
   }
-  
-  // Small delay for better UX
-  setTimeout(() => {
-    window.location.href = mailto;
-  }, 500);
 });
