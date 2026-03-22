@@ -51,6 +51,8 @@ themeToggle?.addEventListener('click', () => {
 
 menuToggle?.addEventListener('click', () => {
   navMenu.classList.toggle('open');
+  const isOpen = navMenu.classList.contains('open');
+  menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
 });
 
 // Smooth scroll to sections when clicking nav links

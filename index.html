@@ -5,11 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amit Jaiswar | Portfolio</title>
   <meta name="description" content="Portfolio website of Amit Jaiswar, Senior AI Engineer." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://amit-jsr.github.io/" />
+  <meta property="og:title" content="Amit Jaiswar | Senior AI Engineer" />
+  <meta property="og:description" content="Building intelligent AI systems with 4.5+ years in GenAI, NLP and ML. Expert in AWS Bedrock, LangChain, and Agentic AI." />
+  <meta property="og:image" content="https://amit-jsr.github.io/assets/profile.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Amit Jaiswar | Senior AI Engineer" />
+  <meta name="twitter:description" content="Building intelligent AI systems with 4.5+ years in GenAI, NLP and ML." />
+  <meta name="twitter:image" content="https://amit-jsr.github.io/assets/profile.jpeg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=20260329" />
+  <link rel="stylesheet" href="style.css?v=20260322c" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -124,7 +138,10 @@ const engineer = {
 
           <aside class="profile-card reveal">
             <div class="profile-ring">
-              <img src="assets/profile.jpeg" alt="Profile placeholder" />
+              <picture>
+                <source srcset="assets/profile.webp" type="image/webp">
+                <img src="assets/profile.jpeg" alt="Amit Jaiswar" />
+              </picture>
             </div>
             <h3>Amit Jaiswar</h3>
             <p>Senior AI Engineer</p>
@@ -855,6 +872,6 @@ const engineer = {
     <a href="#top" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
   </footer>
 
-  <script src="script.js?v=20260322h"></script>
+  <script src="script.js?v=20260322i"></script>
 </body>
 </html>
