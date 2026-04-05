@@ -578,6 +578,53 @@ a {
   gap: 28px;
 }
 
+/* Horizontal Articles row and cards */
+.articles-row {
+  margin-top: 22px;
+  overflow: hidden;
+}
+
+.articles-track {
+  display: flex;
+  flex-direction: column; /* stack links vertically, one per row */
+  gap: 12px;
+}
+
+
+/* Minimal link-only article items (full-width rows) */
+
+.article-link {
+  display: block;
+  padding: 6px 0; /* reduced vertical padding */
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* subtle separator between rows (tighter) */
+.article-link + .article-link {
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.article-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 560px) {
+  .article-link { padding: 6px 0; }
+}
+
+@media (max-width: 1120px) {
+  .article-card { min-width: 280px; flex: 0 0 280px; }
+}
+
+@media (max-width: 560px) {
+  .article-card { min-width: 260px; flex: 0 0 260px; }
+}
+
 /* Two-Column Project Layout */
 .projects-layout {
   display: grid;
