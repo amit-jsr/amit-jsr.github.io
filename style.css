@@ -14,6 +14,13 @@
   --shadow: 0 16px 40px rgba(34, 53, 91, 0.08);
   --pill: #eef3ff;
   --footer: #06152d;
+
+  /* lightweight spacing tokens and subtle accent used by small UI flourishes */
+  --space-xs: 6px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 28px;
+  --accent-soft: rgba(47,102,220,0.04);
 }
 
 body.dark {
@@ -96,13 +103,16 @@ a {
 .nav-link {
   font-weight: 600;
   font-size: 1rem;
-  color: var(--muted);
+  color: var(--text); /* match the 'Amit' text color (not the colored span) */
   transition: .2s;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
   color: var(--primary);
+}
+
+.nav-link.active {
+  color: var(--primary-dark);
 }
 
 .nav-actions {
@@ -114,8 +124,6 @@ a {
 .theme-toggle,
 .resume-btn,
 .btn,
-.project-link,
-.slider-controls button,
 .icon-btn,
 .scroll-top,
 .menu-toggle {
@@ -136,11 +144,10 @@ a {
   justify-content: center;
 }
 
-.theme-toggle:focus,
+theme-toggle:focus,
 .btn:focus,
 .resume-btn:focus,
-.icon-btn:focus,
-.slider-controls button:focus {
+.icon-btn:focus {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
@@ -159,9 +166,8 @@ a {
   gap: 8px;
 }
 
-.resume-btn:hover,
+resume-btn:hover,
 .btn-primary:hover,
-.slider-controls .active-btn:hover,
 .scroll-top:hover {
   background: var(--primary-dark);
 }
@@ -284,10 +290,8 @@ a {
 }
 
 .btn-secondary:hover,
-.project-link:hover,
 .theme-toggle:hover,
-.icon-btn:hover,
-.slider-controls button:hover {
+.icon-btn:hover {
   transform: translateY(-2px);
 }
 
@@ -613,16 +617,75 @@ a {
   text-decoration: underline;
 }
 
+/* --- Beautification tweaks (low-risk UI flourishes) --- */
+/* Subtle hover polish for article rows (no arrow) */
+.article-link {
+  transition: color .18s ease, background .18s ease;
+  position: relative;
+  padding-right: 0; /* reset space reserved for arrow */
+}
+.article-link:hover,
+.article-link:focus-visible {
+  color: var(--primary);
+  text-decoration: none;
+  background: var(--accent-soft);
+  border-radius: 6px;
+}
+
+/* Nav underline transition for nicer hover */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 4px;
+  width: 0;
+  background: var(--primary);
+  border-radius: 6px;
+  transition: width .22s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Slight lift for buttons and icon buttons for more tactile feel */
+.btn {
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(47,102,220,0.12);
+}
+.icon-btn {
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.icon-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(47,102,220,0.08);
+  background: color-mix(in srgb, var(--primary) 6%, var(--bg-soft));
+  color: var(--primary);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .article-link,
+  .nav-link::after,
+  .btn,
+  .icon-btn,
+  .code-card,
+  .reveal { transition: none !important; transform: none !important; animation: none !important; }
+}
+
 @media (max-width: 560px) {
   .article-link { padding: 6px 0; }
 }
 
 @media (max-width: 1120px) {
-  .article-card { min-width: 280px; flex: 0 0 280px; }
-}
-
-@media (max-width: 560px) {
-  .article-card { min-width: 260px; flex: 0 0 260px; }
+  /* responsive adjustments retained for other components */
 }
 
 /* Two-Column Project Layout */
