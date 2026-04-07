@@ -133,7 +133,7 @@ a {
 .theme-toggle {
   width: 42px;
   height: 42px;
-  border-radius: 999px;
+  border-radius: 24px;
   border: 1px solid var(--border);
   background: var(--bg-soft);
   color: var(--muted);
@@ -144,7 +144,7 @@ a {
   justify-content: center;
 }
 
-theme-toggle:focus,
+.theme-toggle:focus,
 .btn:focus,
 .resume-btn:focus,
 .icon-btn:focus {
@@ -159,14 +159,14 @@ theme-toggle:focus,
   font-size: 0.875rem;
   line-height: 1;
   padding: 12px 20px;
-  border-radius: 14px;
+  border-radius: 8px;
   box-shadow: var(--shadow);
   display: inline-flex;
   align-items: center;
   gap: 8px;
 }
 
-resume-btn:hover,
+.resume-btn:hover,
 .btn-primary:hover,
 .scroll-top:hover {
   background: var(--primary-dark);
@@ -188,7 +188,7 @@ resume-btn:hover,
   height: 2px;
   background: var(--text);
   margin: 5px auto;
-  border-radius: 999px;
+  border-radius: 2px;
 }
 
 .hero {
@@ -263,7 +263,7 @@ resume-btn:hover,
   gap: 8px;
   min-height: 48px;
   padding: 0 24px;
-  border-radius: 12px;
+  border-radius: 8px;
   font-weight: 700;
   font-size: 0.9375rem;
   border: 1px solid var(--border);
@@ -311,7 +311,7 @@ resume-btn:hover,
   height: 48px;
   display: inline-grid;
   place-items: center;
-  border-radius: 999px;
+  border-radius: 24px;
   border: 1px solid var(--border);
   background: var(--bg-soft);
   color: var(--muted);
@@ -333,7 +333,7 @@ resume-btn:hover,
   position: absolute;
   inset: 24px -8px -12px 24px;
   background: rgba(76, 120, 230, 0.15);
-  border-radius: 28px;
+  border-radius: 12px;
   transform: rotate(6deg);
   filter: blur(2px);
 }
@@ -342,7 +342,7 @@ resume-btn:hover,
   position: relative;
   background: var(--bg-soft);
   border: 1px solid var(--border);
-  border-radius: 28px;
+  border-radius: 12px;
   box-shadow: var(--shadow);
   padding: 28px;
   overflow: hidden;
@@ -399,7 +399,7 @@ resume-btn:hover,
 .underline {
   width: 86px;
   height: 6px;
-  border-radius: 999px;
+  border-radius: 3px;
   background: var(--primary);
   margin: 16px 0 0;
 }
@@ -416,7 +416,7 @@ resume-btn:hover,
   background: var(--bg-soft);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  border-radius: 28px;
+  border-radius: 12px;
   padding: 20px;
 }
 
@@ -503,7 +503,7 @@ resume-btn:hover,
   background: var(--bg-soft);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  border-radius: 28px;
+  border-radius: 12px;
 }
 
 .info-card {
@@ -574,7 +574,7 @@ resume-btn:hover,
   border: 1px solid var(--border);
   color: var(--primary);
   padding: 8px 12px;
-  border-radius: 999px;
+  border-radius: 24px;
   font-size: 0.8125rem;
   font-weight: 600;
 }
@@ -693,10 +693,6 @@ resume-btn:hover,
   .article-link { padding: 6px 0; }
 }
 
-@media (max-width: 1120px) {
-  /* responsive adjustments retained for other components */
-}
-
 /* Two-Column Project Layout */
 .projects-layout {
   display: grid;
@@ -717,7 +713,7 @@ resume-btn:hover,
 .projects-sidebar {
   background: transparent;
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 24px;
   box-shadow: none;
   height: 500px;
@@ -743,7 +739,7 @@ resume-btn:hover,
   align-items: center;
   gap: 12px;
   padding: 14px 12px;
-  border-radius: 14px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   border: 1px solid transparent;
@@ -799,7 +795,7 @@ resume-btn:hover,
 .project-list-icon {
   width: 40px;
   height: 40px;
-  border-radius: 12px;
+  border-radius: 8px;
   display: grid;
   place-items: center;
   background: var(--pill);
@@ -840,7 +836,7 @@ resume-btn:hover,
   position: relative;
   background: transparent;
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 24px;
   box-shadow: none;
   overflow-y: auto;
@@ -920,7 +916,7 @@ resume-btn:hover,
   display: inline-flex;
   align-items: center;
   padding: 8px 16px;
-  border-radius: 999px;
+  border-radius: 24px;
   font-size: 0.8125rem;
   font-weight: 700;
   background: #def7e7;
@@ -960,7 +956,7 @@ resume-btn:hover,
   padding: 18px;
   background: var(--pill);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 10px;
 }
 
 .project-highlights h4,
@@ -1081,7 +1077,7 @@ resume-btn:hover,
   display: inline-flex;
   margin-top: 10px;
   padding: 5px 12px;
-  border-radius: 999px;
+  border-radius: 24px;
   font-size: 0.8rem;
   font-weight: 700;
   transition: transform 0.3s ease;
@@ -1139,7 +1135,7 @@ resume-btn:hover,
 .contact-icon {
   width: 48px;
   height: 48px;
-  border-radius: 16px;
+  border-radius: 10px;
   display: grid;
   place-items: center;
   background: var(--pill);
@@ -1207,7 +1203,7 @@ resume-btn:hover,
   border: 1px solid var(--border);
   background: transparent;
   color: var(--text);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 12px 14px;
   font: inherit;
   outline: none;
@@ -1297,7 +1293,7 @@ resume-btn:hover,
   bottom: 26px;
   width: 54px;
   height: 54px;
-  border-radius: 999px;
+  border-radius: 24px;
   display: grid;
   place-items: center;
   background: var(--primary);
